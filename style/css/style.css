@@ -11,6 +11,7 @@
     --color-border: #e5e9f2;
     --color-white: white;
     --color-icon: #8A8C8D;
+    --color-violet: #673AB7;
     /* background */
     --bg-primary: #F7FBFD;
     --bg-primary-01: #6272e91a;
@@ -18,12 +19,15 @@
     --bg-white-02: rgba(255, 255, 255, 0.205);
     --bg-red-01: #ff52521a;
     --bg-green-01: #3bc16e1e;
+    --bg-green-02: rgba(59, 193, 110, 0.5);
     --bg-orange-01: #f57d3d13;
     --bg-white-05: rgba(255, 255, 255, 0.281);
     --bg-white-02: rgba(255, 255, 255, 0.082);
     --bg-white-07: rgba(255, 255, 255, 0.705);
     --bg-primary-dark-05: #29155b50;
     --bg-primary-text-01: #14141413;
+    --bg-primary-dark-02: rgba(41, 21, 91, 0.2);
+    --bg-gradien: linear-gradient(to right, rgba(250, 232, 239, 0.5), rgba(215, 235, 239, 0.5));
     /* bg-color */
     --bg-yellow: #FFF4E4;
     --bg-green: #EAF7F1;
@@ -77,6 +81,34 @@
 
 .bg-red {
     background-color: var(--bg-red) !important;
+}
+
+.badget-green {
+    background-color: var(--bg-green-01);
+    color: var(--color-green);
+}
+
+.badget-violet {
+    background-color: var(--bg-violet);
+    color: var(--color-violet);
+}
+
+.badget-blue {
+    background-color: var(--bg-blue);
+    color: var(--color-primary-dark);
+}
+
+.badge-customer {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: .75em;
+    line-height: 1;
+    /* color: var(--color-text-primary); */
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    font-weight: 500 !important;
 }
 
 @font-face {
@@ -319,7 +351,7 @@ nav.navbar-profile {
 
 .services {
     padding: 120px 0;
-    background-color: var(--bg-primary);
+    background-image: var(--bg-gradien);
 }
 
 .services .top {
@@ -396,7 +428,7 @@ nav.navbar-profile {
 
 .skill {
     padding: 120px 0;
-    background-color: var(--bg-primary);
+    background-image: var(--bg-gradien);
 }
 
 .skill .top h1 {
@@ -420,6 +452,7 @@ nav.navbar-profile {
     font-size: 12px;
     font-weight: 600;
     transition: all .1s ease-in-out;
+    border: 1px solid var(--bg-primary-dark-02);
 }
 
 .skill .content-skill .item-skill:hover {
@@ -448,12 +481,13 @@ nav.navbar-profile {
 .project {
     padding: 120px 0;
     text-align: center;
+    /* background-image: var(--bg-gradien); */
 }
 
 .project .item-project {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .project .item-project .img-project {
@@ -467,7 +501,8 @@ nav.navbar-profile {
     object-fit: cover;
     border-radius: 1rem;
     transition: all .2s ease-in-out;
-    border: 1px solid var(--color-border);
+    /* border: 1px solid var(--color-border); */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .project .item-project .name-project {
